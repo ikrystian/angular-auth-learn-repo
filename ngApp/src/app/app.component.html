@@ -5,8 +5,9 @@
   </ul>
 
   <ul>
-    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-    <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+    <li *ngIf="!_authService.loggedIn()"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li *ngIf="!_authService.loggedIn()"><a routerLink="/register" routerLinkActive="active">Register</a></li>
+    <li *ngIf="_authService.loggedIn()"><a class="app__logout" (click)="_authService.logoutUser()">Logout</a></li>
   </ul>
 </nav>
 

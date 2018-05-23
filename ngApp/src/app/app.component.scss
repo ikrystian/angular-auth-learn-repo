@@ -1,0 +1,11 @@
+.app {
+
+  &__logout {
+    color: red;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
