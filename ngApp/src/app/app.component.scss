@@ -1,7 +1,7 @@
 .app {
 
   &__logout {
-    color: red;
+    color: var(--warn-color);
     text-decoration: underline;
 
     &:hover {
