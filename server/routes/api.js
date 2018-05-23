@@ -20,11 +20,11 @@ router.get('/', (req, res) => {
 router.post('/register', (req, res) => {
     let userData = req.body;
     let user = new User(userData);
-    user.save((error, registerUser) => {
+    user.save((error, registeredUser) => {
         if(error) {
             console.log(error);
         } else {
-            res.status(200).send(registerUser);
+            res.status(200).send(registeredUser);
         }
     });
 });
