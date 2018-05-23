@@ -1,3 +1,5 @@
-<p>
-  special-events works!
-</p>
+<div class="event" *ngFor="let event of specialEvents">
+  <h5>{{ event.name }}</h5>
+  <p> {{ event.description }} </p>
+  <span>{{ event.date | date:'shortDate' }}</span>
+</div>
